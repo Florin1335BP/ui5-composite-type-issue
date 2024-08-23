@@ -13,6 +13,18 @@
         "sourceTemplate": {
             "id": "@sap-ux/fiori-freestyle-writer:basic",
             "version": "0.21.10"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/mockServer/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "4.0",
+                    "operationMode": "Server",
+                    "groupId": "$auto",
+                    "autoExpandSelect": true
+                }
+            }
         }
     },
     "sap.ui": {
@@ -50,6 +62,9 @@
                 "settings": {
                     "bundleName": "myui5app.i18n.i18n"
                 }
+            },
+            "": {
+                "dataSource": "mainService"
             }
         },
         "resources": {

@@ -25,3 +25,11 @@ server:
         test:
           - framework: Qunit
           - framework: OPA5
+    - name: sap-fe-mockserver
+      beforeMiddleware: compression
+      mountPath: /
+      configuration:
+        service:
+          urlPath: "/mockServer/"
+          metadataXmlPath: "./webapp/localService/metadata.xml"
+          generateMockData: true

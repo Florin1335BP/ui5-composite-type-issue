@@ -6,7 +6,7 @@
         "deploy": "cf deploy mta_archives/my.app.myui5project.mtar --retries 0",
         "lint": "npm run lint --workspaces --if-present",
         "ui5lint": "npm run ui5lint --workspaces --if-present",
-        "start:myui5app": "npm start --workspace myui5app"
+        "start": "npm start --workspace myui5app"
     },
     "dependencies": {
         "mbt": "^1"

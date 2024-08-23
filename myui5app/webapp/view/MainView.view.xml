@@ -1,7 +1,17 @@
 <mvc:View controllerName="myui5app.controller.MainView"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+    <Page id="page" title="{i18n>title}" binding="{
+            path: '/Categories(1)',
+            parameters: {
+                $$updateGroupId: 'all'
+            }
+        }">
+        <Label text="Property binding" showColon="true"/>
+        <Input value="{Amount}"/>
+        <Label text="Composite (currency) binding" showColon="true"/>
+        <Input value="{parts: ['Amount', 'Currency'], type:'sap.ui.model.type.Currency'}" />
+        <Button text="Reset changes" press=".onResetChanges"/>
+        <Button text="Refresh data" press=".onRefresh"/>
     </Page>
 </mvc:View>
